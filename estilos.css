@@ -1,0 +1,54 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .col {
+    float: left;
+    width: 50%;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+  
+  input[type="text"], input[type="number"] {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    display: inline;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #dd3939;
+    margin-left: 3%;
+    margin-top: 2%;
+  }
+
+  button:hover{
+    background-color: #a32a2a;
+  }
+  
+  #resultado {
+    margin-bottom: 20px;
+  }
+  
+  #historial li {
+    margin-bottom: 10px;
+  }
+  
