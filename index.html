@@ -1,35 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comparador de Precios</title>
   <link rel="stylesheet" href="estilos.css">
-  <title>Document</title>
 </head>
 
 <body>
   <div class="container">
-    <h1>Comparador de precios</h1>
+    <h1>Comparador de Precios</h1>
     <div class="row">
       <div class="col" id="contenedor_1">
-        <label for="producto1">Producto 1:</label>
-        <input type="text" id="producto1">
-        <label for="precio1">Precio:</label>
-        <input type="number" id="precio1">
+        <h2>Producto 1</h2>
+        <input type="text" id="producto1" placeholder="Ingrese el nombre del producto">
+        <input type="number" id="precio1" placeholder="Ingrese el precio">
+        <input type="number" id="peso1" placeholder="Ingrese el peso en gramos">
       </div>
       <div class="col" id="contenedor_2">
-        <label for="producto2">Producto 2:</label>
-        <input type="text" id="producto2">
-        <label for="precio2">Precio:</label>
-        <input type="number" id="precio2">
+        <h2>Producto 2</h2>
+        <input type="text" id="producto2" placeholder="Ingrese el nombre del producto">
+        <input type="number" id="precio2" placeholder="Ingrese el precio">
+        <input type="number" id="peso2" placeholder="Ingrese el peso en gramos">
       </div>
     </div>
-    <button onclick="compararPrecios()">Comparar precios</button>
-    <h2>Historial de comparaciones</h2>
-    <ul id="historial">
-    </ul>
+    <button id="btn_comparar" onclick="compararPrecios();">Comparar</button>
+    <button id="btn_limpiar" onclick="location.reload();">Limpiar</button>
+    <button id="btn_guardar">Guardar</button>
+    <div id="resultado"></div>
+    <h2>Historial de Comparaciones</h2>
+    <ul id="historial"></ul>
   </div>
   <script src="script.js"></script>
 </body>

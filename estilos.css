@@ -1,3 +1,6 @@
+body{
+  background-color: #ccc;
+}
 .container {
     max-width: 800px;
     margin: 0 auto;
@@ -35,13 +38,27 @@
     border: none;
     border-radius: 4px;
     color: #fff;
-    background-color: #dd3939;
     margin-left: 3%;
     margin-top: 2%;
   }
 
-  button:hover{
+  #btn_comparar{
+    background-color: #3e8e41;
+  }
+  #btn_comparar:hover {
+    background-color: #4CAF50;
+  }
+  #btn_limpiar{
     background-color: #a32a2a;
+  }
+  #btn_limpiar:hover{
+    background-color: #dd3939;
+  }
+  #btn_guardar{
+    background-color: #2a50a3;
+  }
+  #btn_guardar:hover{
+    background-color: #3965dd;
   }
   
   #resultado {
