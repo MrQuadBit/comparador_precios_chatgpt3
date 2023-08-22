@@ -13,21 +13,19 @@
     <h1>Comparador de Precios</h1>
     <div class="row">
       <div class="col" id="contenedor_1">
-        <h2>Producto 1</h2>
-        <input type="text" id="producto1" placeholder="Ingrese el nombre del producto">
+        <h2 id="producto1" class="nombre_producto" contenteditable="true">Producto 1</h2>
         <input type="number" id="precio1" placeholder="Ingrese el precio">
         <input type="number" id="peso1" placeholder="Ingrese el peso en gramos">
       </div>
       <div class="col" id="contenedor_2">
-        <h2>Producto 2</h2>
-        <input type="text" id="producto2" placeholder="Ingrese el nombre del producto">
+        <h2 id="producto2" class="nombre_producto" contenteditable="true">Producto 2</h2>
         <input type="number" id="precio2" placeholder="Ingrese el precio">
         <input type="number" id="peso2" placeholder="Ingrese el peso en gramos">
       </div>
     </div>
     <button id="btn_comparar" onclick="compararPrecios();">Comparar</button>
     <button id="btn_limpiar" onclick="location.reload();">Limpiar</button>
-    <button id="btn_guardar">Guardar</button>
+    <button id="btn_guardar" onclick="location.reload();">Guardar</button>
     <div id="resultado"></div>
     <h2>Historial de Comparaciones</h2>
     <ul id="historial"></ul>
