@@ -1,12 +1,12 @@
-var historial = [];
+let historial = [];
 
 function compararPrecios() {
-  var producto1 = document.getElementById("producto1").value;
-  var producto2 = document.getElementById("producto2").value;
-  var precio1 = document.getElementById("precio1").value;
-  var precio2 = document.getElementById("precio2").value;
-  var peso1 = document.getElementById("peso1").value;
-  var peso2 = document.getElementById("peso2").value;
+  let producto1 = document.getElementById("producto1").textContent;
+  let producto2 = document.getElementById("producto2").textContent;
+  let precio1 = document.getElementById("precio1").value;
+  let precio2 = document.getElementById("precio2").value;
+  let peso1 = document.getElementById("peso1").value;
+  let peso2 = document.getElementById("peso2").value;
 
   
   producto1 = ((producto1 === "") ? "Producto 1" : producto1);
@@ -19,22 +19,29 @@ function compararPrecios() {
   precio_por_gramo_1 = precio1 / peso1;
   precio_por_gramo_2 = precio2 / peso2;
 
+  let aux = "";
+
   if(precio_por_gramo_1 < precio_por_gramo_2){
     document.getElementById("contenedor_1").style.backgroundColor = "green";
     document.getElementById("contenedor_2").style.backgroundColor = "red";
+    aux = "<";
   }else if(precio_por_gramo_2 < precio_por_gramo_1){
     document.getElementById("contenedor_2").style.backgroundColor = "green";
     document.getElementById("contenedor_1").style.backgroundColor = "red";
+    aux = ">";
   }else{
     alert("Ambos productos cuestan lo mismo");
+    aux = "=";
   }
+
+  let resultado1 = `<label contenteditable="true">${producto1}</label> $${precio1} ${peso1} gramos`;
+  let resultado2 = `<label contenteditable="true">${producto2}</label> $${precio2} ${peso2} gramos`;
   
-  var resultado = `${producto1} precio ${precio1} peso ${peso1} | ${producto2} precio ${precio2} peso ${peso2}`;
-  
+  let resultado = `${resultado1} ${aux} ${resultado2}`;  
   
   historial.push(resultado);
-  var listaHistorial = document.getElementById("historial");
-  var nuevaComparacion = document.createElement("li");
+  let listaHistorial = document.getElementById("historial");
+  let nuevaComparacion = document.createElement("li");
   nuevaComparacion.innerHTML = resultado;
   listaHistorial.appendChild(nuevaComparacion);
 }
