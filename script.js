@@ -45,3 +45,12 @@ function compararPrecios() {
   nuevaComparacion.innerHTML = resultado;
   listaHistorial.appendChild(nuevaComparacion);
 }
+
+function limpiar(){
+  document.getElementById("producto1").textContent = "Producto 1";
+  document.getElementById("producto2").textContent = "Producto 2";
+  document.getElementById("precio1").value = "";
+  document.getElementById("precio2").value = "";
+  document.getElementById("peso1").value = "";
+  document.getElementById("peso2").value = "";
+}
